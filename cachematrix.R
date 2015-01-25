@@ -1,5 +1,6 @@
 ## This function returns a list of functions. It takes a matrix as input and provides functions that allow to get and set the matrix
 ## It also allows to store the inverse matrix within its environment and to return this inverse matrix 
+## If the matrix is modified through the set function then also the inverse is set to NULL.
 
 makeCacheMatrix <- function(x = matrix()) {
 
@@ -28,7 +29,6 @@ makeCacheMatrix <- function(x = matrix()) {
 
 ## This function returns the inverse of a matrix that is stored within an environment (cache) defined by the list passed to it as input parameter.
 ## Its input parameter is a list that needs to contain the functions getinverse, get and setinverse. Such a list is created by passing a matrix to the function makeCacheMatrix
-
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'     
